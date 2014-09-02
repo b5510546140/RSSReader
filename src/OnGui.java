@@ -70,24 +70,19 @@ public class OnGui extends JFrame {
 						
 						SimpleAttributeSet keyWord = new SimpleAttributeSet();
 						StyleConstants.setForeground(keyWord, Color.BLUE);
-//						StyleConstants.setBackground(keyWord, Color.YELLOW);
 						StyleConstants.setBold(keyWord, true);
-//						textArea.setLineWrap(true);
-//						textPane.("\n");
+
 						try {
 							uri = new URI(item.getLink());
 						} catch (URISyntaxException e1) {
-							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
 						
 						try {
-//							doc.insertString(0, "eiei", null );
 							doc.insertString(doc.getLength(), "\n", null );
 							doc.insertString(doc.getLength(), uri.toString(), keyWord );
 							
 						} catch (BadLocationException e1) {
-							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
 						
